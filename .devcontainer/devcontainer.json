@@ -1,0 +1,23 @@
+{
+  "name": "GitHub Actions Assessment",
+  "dockerFile": "Dockerfile",
+  "runArgs": ["--init", "--privileged"],
+  "overrideCommand": false,
+  "remoteUser": "codespace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "github.vscode-github-actions",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-azuretools.vscode-docker",
+        "SanjulaGanepola.github-local-actions"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  "forwardPorts": [],
+  "postCreateCommand": "npm install && echo 'Environment ready for GitHub Actions assessment!'"
+}
